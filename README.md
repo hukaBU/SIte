@@ -1,4 +1,4 @@
-# SIte
+# Site : CashFlow
 
 Bienvenue sur le dépôt GitHub de MonSite : CashFlow ! Ce projet inclut trois pages principales :
 
