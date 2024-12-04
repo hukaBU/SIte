@@ -1,4 +1,4 @@
-Bienvenue sur le dépôt GitHub de MonSite :CashFlow !
+Bienvenue sur le dépôt GitHub de MonSite : CashFlow !
 Ce projet inclut trois pages principales :
 
 - Landing Page - Une page d'accueil pour présenter votre site.
