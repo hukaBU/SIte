@@ -66,7 +66,7 @@ Prérequis :
 - Configurez le fichier de connexion à la base de données si nécessaire (db.php, non inclus ici).
 
 Lancement :
-- Accédez à http://localhost/mon_site/mon_site.php dans votre navigateur pour voir la page d'accueil.
+- Accédez à http://localhost/mon_site/index.php/mon_site.php dans votre navigateur pour voir la page d'accueil.
 
 Contribution :
 Les contributions sont les bienvenues ! Suivez ces étapes pour contribuer :
