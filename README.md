@@ -18,6 +18,7 @@ Structure du projet
 Voici un fichier README.md pour un dépôt GitHub qui correspond à ton projet avec les trois pages décrites :
 
 MonSite : CashFlow Site Web avec une Landing Page, Inscription et Connexion
+
 Bienvenue sur le dépôt GitHub de MonSite, CashFlow !
 Ce projet inclut trois pages principales :
 
