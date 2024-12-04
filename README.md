@@ -17,23 +17,25 @@ Structure du projet
 
 Voici un fichier README.md pour un dépôt GitHub qui correspond à ton projet avec les trois pages décrites :
 
-MonSite : Site Web avec Landing Page, Inscription et Connexion
-Bienvenue sur le dépôt GitHub de MonSite !
+MonSite : CashFlow Site Web avec une Landing Page, Inscription et Connexion
+Bienvenue sur le dépôt GitHub de MonSite, CashFlow !
 Ce projet inclut trois pages principales :
 
 Landing Page - Une page d'accueil pour présenter votre site.
 Page d'inscription - Permet aux utilisateurs de créer un compte.
 Page de connexion - Permet aux utilisateurs enregistrés de se connecter.
 Structure du projet
-bash
-Copier le code
+
 /
 ├── mon_site.php  # Landing page (Page d'accueil)
 ├── register.php  # Page d'inscription
 ├── login.php     # Page de connexion
 ├── assets/       # Dossier pour les fichiers CSS/JS/images (non inclus ici)
 └── README.md     # Ce fichier
-Pages détaillées
+
+
+Pages détaillées : 
+
 1. Landing Page (mon_site.php)
 Contient des informations de présentation du site.
 Inclut des liens pour s'inscrire (register.php) et se connecter (login.php).
