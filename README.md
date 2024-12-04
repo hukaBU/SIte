@@ -1,11 +1,11 @@
 Bienvenue sur le dépôt GitHub de MonSite :CashFlow !
 Ce projet inclut trois pages principales :
 
-Landing Page - Une page d'accueil pour présenter votre site.
+- Landing Page - Une page d'accueil pour présenter votre site.
 
-Page d'inscription - Permet aux utilisateurs de créer un compte.
+- Page d'inscription - Permet aux utilisateurs de créer un compte.
 
-Page de connexion - Permet aux utilisateurs enregistrés de se connecter.
+- Page de connexion - Permet aux utilisateurs enregistrés de se connecter.
 
 Structure du projet
 /
