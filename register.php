@@ -448,13 +448,15 @@ body {
 
 <nav class="navbar">
   <div class="navbar-content">
-    <div class="logo">
-      <svg width="30" height="30" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="45" fill="none" stroke="#48CAE4" stroke-width="8"/>
-        <path d="M35 50h30M50 35v30" stroke="#48CAE4" stroke-width="8" stroke-linecap="round"/>
-      </svg>
-      CashFlow
-    </div>
+    <a href="http://localhost/mon_site/index.php/mon_site.php" style="text-decoration: none;">
+      <div class="logo">
+        <svg width="30" height="30" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#48CAE4" stroke-width="8"/>
+          <path d="M35 50h30M50 35v30" stroke="#48CAE4" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+        CashFlow
+      </div>
+    </a>
     <div class="nav-links">
       <a href="#features">Fonctionnalités</a>
       <a href="#partners">Partenaires</a>
@@ -514,6 +516,8 @@ body {
   </div>
 </section>
 
+
+
 <section class="card-section">
   <h2>Carte Cashback Premium</h2>
   <div class="card-container">
@@ -543,7 +547,7 @@ body {
       <li>✈️ Avantages voyage premium et accès aux salons</li>
       <li>💎 Service de conciergerie 24h/24 et 7j/7</li>
     </ul>
-    <a href="http://localhost/mon_site/index.php/register.php" class="cta-button">Souscrire</a>
+    <a href="http://localhost/mon_site/index.php/mon_site.php" class="cta-button">Souscrire</a>
   </div>
 </section>
 
@@ -700,7 +704,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 
-    // Handle form submission
+    // Handle form submission for registration
     document.querySelector('.register-form').addEventListener('submit', function(e) {
         e.preventDefault();
         
@@ -717,6 +721,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // For now, we'll just show a success message
         alert('Compte créé avec succès! Vous allez être redirigé vers la page de connexion.');
         window.location.href = 'http://localhost/mon_site/index.php/login.php';
+    });
+
+    // Add this new event listener for login form
+    document.querySelector('.login-form')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Here you would normally send the login credentials to your server
+        // For now, we'll just show a success message
+        alert('Connexion réussie! Vous allez être redirigé vers votre tableau de bord.');
+        window.location.href = 'http://localhost/mon_site/index.php/mon_site.php';
     });
 });
 </script>
