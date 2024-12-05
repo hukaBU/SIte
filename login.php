@@ -449,11 +449,13 @@ body {
 <nav class="navbar">
   <div class="navbar-content">
     <div class="logo">
-      <svg width="30" height="30" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="45" fill="none" stroke="#48CAE4" stroke-width="8"/>
-        <path d="M35 50h30M50 35v30" stroke="#48CAE4" stroke-width="8" stroke-linecap="round"/>
-      </svg>
-      CashFlow
+      <a href="http://localhost/mon_site/index.php/mon_site.php" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+        <svg width="30" height="30" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#48CAE4" stroke-width="8"/>
+          <path d="M35 50h30M50 35v30" stroke="#48CAE4" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+        <span style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">CashFlow</span>
+      </a>
     </div>
     <div class="nav-links">
       <a href="#features">Fonctionnalités</a>

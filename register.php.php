@@ -1,4 +1,4 @@
-<html><head><base href="." /> 
+<html><head><base href="." />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>CashFlow | Smart Banking with Effortless Cashback</title>
@@ -354,6 +354,8 @@ body {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .register-container h2 {
@@ -373,7 +375,8 @@ body {
   flex-direction: column;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
   padding: 1rem;
   border: 2px solid #eee;
   border-radius: 5px;
@@ -381,7 +384,8 @@ body {
   transition: border-color 0.3s ease;
 }
 
-.form-group input:focus {
+.form-group input:focus,
+.form-group select:focus {
   outline: none;
   border-color: var(--primary);
 }
@@ -398,7 +402,7 @@ body {
 }
 
 .submit-button {
-  background: var(--primary);
+  background: var(--red);
   color: white;
   padding: 1rem;
   border: none;
@@ -410,11 +414,11 @@ body {
 }
 
 .submit-button:hover {
-  background: var(--secondary);
+  background: #ff3333;
 }
 
 .form-group input:invalid {
-  border-color: #dc3545;
+  border-color: var(--red);
 }
 
 .form-group input:valid {
@@ -437,78 +441,6 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
-.rgpd-section {
-  background: var(--dark);
-  color: var(--light);
-  padding: 4rem 2rem;
-  margin-top: 4rem;
-}
-
-.rgpd-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.rgpd-container h3 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
-}
-
-.rgpd-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.rgpd-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.rgpd-card:hover {
-  transform: translateY(-5px);
-}
-
-.rgpd-card h4 {
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.rgpd-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.rgpd-links a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.rgpd-links a:hover {
-  color: var(--primary);
-}
-
-.rgpd-copyright {
-  text-align: center;
-  opacity: 0.7;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-  .rgpd-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
 </head>
@@ -516,21 +448,21 @@ body {
 
 <nav class="navbar">
   <div class="navbar-content">
-    <div class="logo">
-      <a href="http://localhost/mon_site/index.php/mon_site.php" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+    <a href="http://localhost/mon_site/index.php/mon_site.php" style="text-decoration: none;">
+      <div class="logo">
         <svg width="30" height="30" viewBox="0 0 100 100">
           <circle cx="50" cy="50" r="45" fill="none" stroke="#48CAE4" stroke-width="8"/>
           <path d="M35 50h30M50 35v30" stroke="#48CAE4" stroke-width="8" stroke-linecap="round"/>
         </svg>
-        <span style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">CashFlow</span>
-      </a>
-    </div>
+        CashFlow
+      </div>
+    </a>
     <div class="nav-links">
       <a href="#features">Fonctionnalités</a>
       <a href="#partners">Partenaires</a>
       <a href="#loyalty">Fidélité</a>
-      <a href="http://localhost/mon_site/index.php/register.php" class="cta-button">S'inscrire</a>
-      <a href="http://localhost/mon_site/index.php/login.php" class="cta-button">Connexion</a>
+      <a href="https://app.cashflow.com/register" class="cta-button">S'inscrire</a>
+      <a href="https://app.cashflow.com/login" class="cta-button">Connexion</a>
     </div>
   </div>
 </nav>
@@ -539,7 +471,70 @@ body {
   <div class="hero-content">
     <h1>La banque qui vous récompense</h1>
     <p>Gagnez jusqu'à 10% de cashback sur chaque achat. Sans frais cachés, sans frais annuels.</p>
-    <a href="http://localhost/mon_site/index.php/register.php" class="cta-button">Commencer Gratuitement</a>
+    <a href="https://app.cashflow.com/register" class="cta-button">Commencer Gratuitement</a>
+  </div>
+</section>
+
+<section class="card-section">
+  <div class="register-container">
+    <h2>Créer votre compte CashFlow</h2>
+    <form class="register-form">
+      <div class="form-group">
+        <input type="text" id="firstname" name="firstname" placeholder="Prénom" required>
+      </div>
+      <div class="form-group">
+        <input type="text" id="lastname" name="lastname" placeholder="Nom" required>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="E-mail" required>
+      </div>
+      <div class="form-group">
+        <select id="country" name="country" required>
+          <option value="">Sélectionnez votre pays</option>
+          <option value="FR">France</option>
+          <option value="BE">Belgique</option>
+          <option value="CH">Suisse</option>
+          <option value="LU">Luxembourg</option>
+          <option value="MC">Monaco</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="tel" id="phone" name="phone" placeholder="Numéro de téléphone" required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmer le mot de passe" required>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">J'accepte les conditions générales d'utilisation et la politique de confidentialité</label>
+      </div>
+      <button type="submit" class="submit-button">Créer mon compte</button>
+    </form>
+  </div>
+</section>
+
+<section class="card-section">
+  <h2>Connexion à votre compte CashFlow</h2>
+  <div class="register-container">
+    <form class="login-form">
+      <div class="form-group">
+        <input type="email" id="login-email" name="email" placeholder="E-mail" required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="login-password" name="password" placeholder="Mot de passe" required>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="remember-me" name="remember-me">
+        <label for="remember-me">Se souvenir de moi</label>
+      </div>
+      <button type="submit" class="submit-button">Se connecter</button>
+      <p style="text-align: center; margin-top: 1rem;">
+        <a href="https://app.cashflow.com/forgot-password" style="color: var(--primary); text-decoration: none;">Mot de passe oublié ?</a>
+      </p>
+    </form>
   </div>
 </section>
 
@@ -572,7 +567,7 @@ body {
       <li>✈️ Avantages voyage premium et accès aux salons</li>
       <li>💎 Service de conciergerie 24h/24 et 7j/7</li>
     </ul>
-    <a href="http://localhost/mon_site/index.php/register.php"  class="cta-button">Souscrire</a>
+    <a href="https://app.cashflow.com/premium-card" class="cta-button">Souscrire</a>
   </div>
 </section>
 
@@ -687,32 +682,6 @@ body {
   </div>
 </section>
 
-<footer class="rgpd-section">
-  <div class="rgpd-container">
-    <h3>Politique de Confidentialité et RGPD</h3>
-    <div class="rgpd-grid">
-      <div class="rgpd-card">
-        <h4>Collecte des Données</h4>
-        <p>Nous collectons uniquement les données nécessaires au bon fonctionnement de nos services bancaires, conformément au RGPD.</p>
-      </div>
-      <div class="rgpd-card">
-        <h4>Vos Droits</h4>
-        <p>Vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données personnelles.</p>
-      </div>
-      <div class="rgpd-card">
-        <h4>Protection des Données</h4>
-        <p>Vos données sont sécurisées et cryptées selon les normes bancaires les plus strictes.</p>
-      </div>
-    </div>
-    <div class="rgpd-links">
-      <a href="#">Politique de confidentialité</a>
-      <a href="#">Conditions générales</a>
-      <a href="#">Gestion des cookies</a>
-    </div>
-    <p class="rgpd-copyright">© 2024 CashFlow. Tous droits réservés.</p>
-  </div>
-</footer>
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Tab switching functionality
@@ -753,6 +722,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelectorAll('.feature-card').forEach((card) => {
         observer.observe(card);
+    });
+
+    // Handle form submission for registration
+    document.querySelector('.register-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Check if passwords match
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+        
+        if (password !== confirmPassword) {
+            alert('Les mots de passe ne correspondent pas');
+            return;
+        }
+        
+        // Here you would normally send the form data to your server
+        // For now, we'll just show a success message
+        alert('Compte créé avec succès! Vous allez être redirigé vers la page de connexion.');
+        window.location.href = 'https://app.cashflow.com/login';
+    });
+
+    // Add this new event listener for login form
+    document.querySelector('.login-form')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Here you would normally send the login credentials to your server
+        // For now, we'll just show a success message
+        alert('Connexion réussie! Vous allez être redirigé vers votre tableau de bord.');
+        window.location.href = 'https://app.cashflow.com/dashboard';
     });
 });
 </script>
